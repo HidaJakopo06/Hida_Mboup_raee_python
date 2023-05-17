@@ -7,5 +7,8 @@ Lavoro di informatica
 
 # Requisiti
  Python 
+ 
  Git
+ 
  Visual Studio Code
+ 
