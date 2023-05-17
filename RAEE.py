@@ -44,7 +44,7 @@ def leggiRifiuto():
                 if elemento == rifiuto:
                     return rifiuto
                 else:
-                    print("Rifiuto di merda !!!")
+                    print("Rifiuto non trovato !!!")
             
 
 
