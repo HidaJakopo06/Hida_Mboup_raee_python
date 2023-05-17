@@ -6,6 +6,8 @@ Questi rifiuti sono caratterizzati dalla loro elevata tossicità per l’ambient
 non biodegradabilità. Questi però, sono ricchi di metalli come rame, ferro, argento,
 oro e piombo, che possono essere riciclati e riutilizzati.
 
+ccc
+
 I RAEE sono suddivisi secondo il Dlgs n.49/2014 in 10 categorie:
 
     1. Grandi elettrodomestici;
