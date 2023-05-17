@@ -7,6 +7,8 @@ def clear():
 def menu():
 
     print("""
+        Scegliere il rifiuto da inserire:
+        
         -Frigoriferi;
         -Condizionatori;
         -Congelatori;
@@ -41,6 +43,8 @@ def leggiRifiuto():
             for elemento in lista:
                 if elemento == rifiuto:
                     return rifiuto
+                else:
+                    print("Rifiuto di merda !!!")
             
 
 
