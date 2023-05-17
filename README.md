@@ -1,5 +1,5 @@
 # Progetto RAEE
-# Hida e Mboup
+
 Inizio il 17/5/2023
 
 Consegna il 30/05/23
@@ -12,3 +12,6 @@ Lavoro di informatica
  
  Visual Studio Code
  
+# Users
+@HidaJakopo06
+@aAssane
