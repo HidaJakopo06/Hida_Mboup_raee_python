@@ -64,7 +64,7 @@ def sceltaRaee():
            for y in x:
                 
             if y == rifiuto:
-                print(tmp)
+                print(y)
     pass
 
 
