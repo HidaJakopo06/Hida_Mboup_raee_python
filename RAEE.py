@@ -36,7 +36,7 @@ def leggiRifiuto():
 
         clear()
         menu()
-        rifiuto = input("Inserisci il rifiuto : ")
+        rifiuto = input("Inserisci il rifiuto : ").capitalize()
         for lista in raee:
             for elemento in lista:
                 if elemento == rifiuto:
@@ -72,7 +72,7 @@ while yes:
     r = sceltaRaee()
     print("Il Raee del rifiuto è :",r)
     time.sleep(2.5)
-    yes = input("Y per continuare - N per terminare: ")
+    yes = input("Y per continuare - N per terminare: ").upper()
     if yes == "N":
         yes = False
     clear()
