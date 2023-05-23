@@ -43,16 +43,20 @@ def sceltaRaee():
         raee4 = ["Elettroutensili", "Giocattoli", "Apparrecchi di illuminazione","Dispositivi medici", "Piccoli elettrodomestici"]
         raee5 = ["Sorgenti luminose compatte", " Lampade fluorescenti","Tubi fluorescenti","Led","Lampade a scarica"]
         raee = [raee1, raee2, raee3, raee4, raee5]
+        
         rifiuto = leggiRifiuto()
-        rifiuto = rifiuto.replace(" ","")
+        tmp = rifiuto.replace(" ","")
+        
         print(rifiuto)
+        
         r = 0
+       
         for lista in raee:
             r += 1 
             for elemento in lista:
-                elemento = elemento.replace(""," ")
-                print(elemento)
-                if elemento == rifiuto:
+                elemento_2 = elemento.replace(" ","")
+                
+                if elemento_2 == tmp:
                     
                    
                     print("Raee Trovato...")
@@ -63,7 +67,7 @@ def sceltaRaee():
                     tmp =inserimento.strftime("%d-%m-%Y")
                     tmp2 = inserimento.strftime("%H:%M:%S")
                     
-                    scrivi.write(f"Il rifiuto  {rifiuto} e' stato inserito il giorno :{tmp} all'ora: {tmp2}\n") 
+                    scrivi.write(f"Il rifiuto {rifiuto} e' stato inserito il giorno :{tmp} all'ora: {tmp2}\n") 
                     
                     
                     scrivi.close()
