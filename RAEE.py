@@ -1,9 +1,19 @@
 import os
 import time
+import tkinter
 
 from datetime import datetime
 
+def stampa (raee):
+    var = 1
+    for i in raee:
+        print(f"Categoria di rifiuti numero {var}: \n")
+        for elemento in i:
+            print(elemento,end=", ")
+        print("\n")
+        var += 1
 
+        
 def apertura(raee):
     percorso = f"File/R{raee}.txt"
     file = open(percorso, "a")
@@ -21,7 +31,7 @@ def clear():
 
 def leggiRifiuto():
     while True:
-        raee1 = ["
+        raee1 = [
                  "Congelatori",
                  "Frigoriferi a doppia porta",
                  "Frigoriferi side-by-side",
@@ -69,16 +79,21 @@ def leggiRifiuto():
         ]
 
         raee5 = ["Sorgenti luminose compatte",
-                 " Lampade fluorescenti",
+                 "Lampade fluorescenti",
                  "Tubi fluorescenti",
                  "Led",
                  "Lampade a scarica"
         ]
         raee = [raee1, raee2, raee3, raee4, raee5]
-
-        time.sleep(1.5)
+        
+        print(f"""
+    Scegliere tra i seguenti rifiuti :
+        """)
+        stampa(raee)  
+        
+        
         rifiuto = input("Inserisci il rifiuto : ").capitalize()
-
+        clear()
         for lista in raee:
             for elemento in lista:
                 if elemento == rifiuto:
@@ -89,7 +104,7 @@ def leggiRifiuto():
 
 def sceltaRaee():
     while True:
-        raee1 = ["
+        raee1 = [
                  "Congelatori",
                  "Frigoriferi a doppia porta",
                  "Frigoriferi side-by-side",
