@@ -41,14 +41,20 @@ def sceltaRaee():
         raee2 = ["Lavastoviglie", "Lavatrici","Apparecchi di cottura","Stufe elettriche","Piastre riscaldanti elettriche"]
         raee3 = ["Televisori", "Monitor","Schermi","Cornici digitali LCD","Laptop","Notebook"]
         raee4 = ["Elettroutensili", "Giocattoli", "Apparrecchi di illuminazione","Dispositivi medici", "Piccoli elettrodomestici"]
-        raee5 = ["Sorgenti luminose compatte", " Lampade fluorescenti","Tubi fluorescenti","Led","Lamapade a scarica"]
+        raee5 = ["Sorgenti luminose compatte", " Lampade fluorescenti","Tubi fluorescenti","Led","Lampade a scarica"]
         raee = [raee1, raee2, raee3, raee4, raee5]
         rifiuto = leggiRifiuto()
+        rifiuto = rifiuto.replace(" ","")
+        print(rifiuto)
         r = 0
         for lista in raee:
             r += 1 
             for elemento in lista:
+                elemento = elemento.replace(""," ")
+                print(elemento)
                 if elemento == rifiuto:
+                    
+                   
                     print("Raee Trovato...")
                     r = str(r)
                     
