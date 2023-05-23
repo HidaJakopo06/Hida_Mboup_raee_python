@@ -157,7 +157,7 @@ def sceltaRaee():
         rifiuto = leggiRifiuto()
         tmp = rifiuto.replace(" ", "")
 
-        text.insert(tk.END, f"Il rifiuto selezionato è: {rifiuto}\n")
+        text.insert(tk.END, f"Il rifiuto selezionato e ': {rifiuto}\n")
 
         r = 0
 
@@ -175,16 +175,16 @@ def sceltaRaee():
                     tmp2 = inserimento.strftime("%H:%M:%S")
 
                     scrivi.write(
-                        f"Il rifiuto {rifiuto} è stato inserito il giorno: {tmp} all'ora: {tmp2}\n")
+                        f"Il rifiuto {rifiuto} e ' stato inserito il giorno: {tmp} all'ora: {tmp2}\n")
 
                     scrivi.close()
-                    text.insert(tk.END, f"Il Raee del rifiuto è: R{r}\n")
+                    text.insert(tk.END, f"Il Raee del rifiuto e ': R{r}\n")
                     return "R"+r
 
 def continue_program():
     global yes
     p = sceltaRaee()
-    yes = tk.messagebox.askyesno("Continua", f"Il Raee del rifiuto è: {p}\nVuoi continuare?")
+    yes = tk.messagebox.askyesno("Continua", f"Il Raee del rifiuto e ': {p}\nVuoi continuare?")
     if not yes:
         root.destroy()
 
