@@ -130,6 +130,8 @@ def sceltaRaee():
                  "Cornici digitali LCD",
                  "Laptop",
                  "Notebook"
+                 "Mouse"
+                 "Tastiera"
         ]
         raee4 = [
             "Telefoni cellulari",
@@ -156,6 +158,7 @@ def sceltaRaee():
                  "Tubi fluorescenti",
                  "Led",
                  "Lampade a scarica"
+                 
         ]
         raee = [raee1, raee2, raee3, raee4, raee5]
 
