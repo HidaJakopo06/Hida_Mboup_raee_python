@@ -1,45 +1,40 @@
 import os
 import time
-import tkinter
-
+import tkinter as tk
 from datetime import datetime
 
-def stampa (raee):
+def stampa(raee):
     var = 1
     for i in raee:
-        print(f"Categoria di rifiuti numero {var}: \n")
+        text.insert(tk.END, f"Categoria di rifiuti numero {var}:\n")
         for elemento in i:
-            print(elemento,end=", ")
-        print("\n")
+            text.insert(tk.END, f"{elemento}, ")
+        text.insert(tk.END, "\n\n")
         var += 1
 
-        
 def apertura(raee):
     percorso = f"File/R{raee}.txt"
     file = open(percorso, "a")
     return file
 
-
 def ora():
     now = datetime.now()
     return now
 
-
 def clear():
     os.system("cls")
-
 
 def leggiRifiuto():
     while True:
         raee1 = [
-                 "Congelatori",
-                 "Frigoriferi a doppia porta",
-                 "Frigoriferi side-by-side",
-                 "Frigoriferi con dispenser di acqua/ghiaccio",
-                 "Congelatori a cassetti",
-                 "Frigoriferi commerciali",
-                 "Congelatori commerciali",
-                 "Armadi frigoriferi industriali"
+            "Congelatori",
+            "Frigoriferi a doppia porta",
+            "Frigoriferi side-by-side",
+            "Frigoriferi con dispenser di acqua/ghiaccio",
+            "Congelatori a cassetti",
+            "Frigoriferi commerciali",
+            "Congelatori commerciali",
+            "Armadi frigoriferi industriali"
         ]
         raee2 = [
             "Lavatrici",
@@ -51,12 +46,13 @@ def leggiRifiuto():
             "Lavastoviglie compatte",
             "Lavastoviglie ad alta capacità"
         ]
-        raee3 = ["Televisori",
-                 "Monitor",
-                 "Schermi",
-                 "Cornici digitali LCD",
-                 "Laptop",
-                 "Notebook"
+        raee3 = [
+            "Televisori",
+            "Monitor",
+            "Schermi",
+            "Cornici digitali LCD",
+            "Laptop",
+            "Notebook"
         ]
         raee4 = [
             "Telefoni cellulari",
@@ -77,42 +73,40 @@ def leggiRifiuto():
             "Lampade fluorescenti",
             "Dispositivi medici"
         ]
-
-        raee5 = ["Sorgenti luminose compatte",
-                 "Lampade fluorescenti",
-                 "Tubi fluorescenti",
-                 "Led",
-                 "Lampade a scarica"
+        raee5 = [
+            "Sorgenti luminose compatte",
+            "Lampade fluorescenti",
+            "Tubi fluorescenti",
+            "Led",
+            "Lampade a scarica"
         ]
         raee = [raee1, raee2, raee3, raee4, raee5]
-        
-        print(f"""
-    Scegliere tra i seguenti rifiuti :
-        """)
-        stampa(raee)  
-        
-        
-        rifiuto = input("Inserisci il rifiuto : ").capitalize()
-        clear()
+
+        text.delete(1.0, tk.END)
+        text.insert(tk.END, "Scegli tra i seguenti rifiuti:\n\n")
+        stampa(raee)
+
+        rifiuto = entry.get().strip().capitalize()
+        entry.delete(0, tk.END)
+
         for lista in raee:
             for elemento in lista:
-                if elemento == rifiuto:
+                if elemento.lower() == rifiuto.lower():
                     return rifiuto
 
-        print("Rifiuto non esistente")
-
+        text.insert(tk.END, "Rifiuto non esistente\n\n")
 
 def sceltaRaee():
     while True:
         raee1 = [
-                 "Congelatori",
-                 "Frigoriferi a doppia porta",
-                 "Frigoriferi side-by-side",
-                 "Frigoriferi con dispenser di acqua/ghiaccio",
-                 "Congelatori a cassetti",
-                 "Frigoriferi commerciali",
-                 "Congelatori commerciali",
-                 "Armadi frigoriferi industriali"
+            "Congelatori",
+            "Frigoriferi a doppia porta",
+            "Frigoriferi side-by-side",
+            "Frigoriferi con dispenser di acqua/ghiaccio",
+            "Congelatori a cassetti",
+            "Frigoriferi commerciali",
+            "Congelatori commerciali",
+            "Armadi frigoriferi industriali"
         ]
         raee2 = [
             "Lavatrici",
@@ -124,12 +118,13 @@ def sceltaRaee():
             "Lavastoviglie compatte",
             "Lavastoviglie ad alta capacità"
         ]
-        raee3 = ["Televisori",
-                 "Monitor",
-                 "Schermi",
-                 "Cornici digitali LCD",
-                 "Laptop",
-                 "Notebook"
+        raee3 = [
+            "Televisori",
+            "Monitor",
+            "Schermi",
+            "Cornici digitali LCD",
+            "Laptop",
+            "Notebook"
         ]
         raee4 = [
             "Telefoni cellulari",
@@ -150,19 +145,19 @@ def sceltaRaee():
             "Lampade fluorescenti",
             "Dispositivi medici"
         ]
-
-        raee5 = ["Sorgenti luminose compatte",
-                 " Lampade fluorescenti",
-                 "Tubi fluorescenti",
-                 "Led",
-                 "Lampade a scarica"
+        raee5 = [
+            "Sorgenti luminose compatte",
+            "Lampade fluorescenti",
+            "Tubi fluorescenti",
+            "Led",
+            "Lampade a scarica"
         ]
         raee = [raee1, raee2, raee3, raee4, raee5]
 
         rifiuto = leggiRifiuto()
         tmp = rifiuto.replace(" ", "")
 
-        print(rifiuto)
+        text.insert(tk.END, f"Il rifiuto selezionato è: {rifiuto}\n")
 
         r = 0
 
@@ -170,8 +165,8 @@ def sceltaRaee():
             r += 1
             for elemento in lista:
                 elemento_2 = elemento.replace(" ", "")
-                if elemento_2 == tmp:
-                    print("Raee Trovato...")
+                if elemento_2.lower() == tmp.lower():
+                    text.insert(tk.END, "Raee Trovato...\n")
                     r = str(r)
 
                     scrivi = apertura(r)
@@ -180,20 +175,39 @@ def sceltaRaee():
                     tmp2 = inserimento.strftime("%H:%M:%S")
 
                     scrivi.write(
-                        f"Il rifiuto {rifiuto} e' stato inserito il giorno :{tmp} all'ora: {tmp2}\n")
+                        f"Il rifiuto {rifiuto} è stato inserito il giorno: {tmp} all'ora: {tmp2}\n")
 
                     scrivi.close()
+                    text.insert(tk.END, f"Il Raee del rifiuto è: R{r}\n")
                     return "R"+r
 
-
-yes = True
-
-while yes:
-
+def continue_program():
+    global yes
     p = sceltaRaee()
-    print("Il Raee del rifiuto è :", p)
-    time.sleep(1.5)
-    yes = input("Y per continuare - N per terminare: ").upper()
-    if yes == "N":
-        yes = False
-    clear()
+    yes = tk.messagebox.askyesno("Continua", f"Il Raee del rifiuto è: {p}\nVuoi continuare?")
+    if not yes:
+        root.destroy()
+
+# Creazione della finestra principale
+root = tk.Tk()
+root.title("Sistema di Gestione dei Rifiuti RAEE")
+root.geometry("500x400")
+
+# Etichetta per l'input del rifiuto
+label = tk.Label(root, text="Inserisci il rifiuto:")
+label.pack()
+
+# Campo di input per il rifiuto
+entry = tk.Entry(root)
+entry.pack()
+
+# Bottone per confermare l'inserimento del rifiuto
+button = tk.Button(root, text="Conferma", command=continue_program)
+button.pack()
+
+# Area di testo per la visualizzazione dei risultati
+text = tk.Text(root)
+text.pack()
+
+# Esecuzione del programma
+root.mainloop()
