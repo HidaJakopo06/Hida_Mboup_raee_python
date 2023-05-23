@@ -21,16 +21,59 @@ def clear():
 
 def leggiRifiuto():
     while True:
-        raee1 = ["Frigoriferi", "Condizionatori", "Congelatori",
-                 "Deumidificatori", "Pompe di calore", "Radiatori a olio", "Asciugatrici"]
-        raee2 = ["Lavastoviglie", "Lavatrici", "Apparecchi di cottura",
-                 "Stufe elettriche", "Piastre riscaldanti elettriche"]
-        raee3 = ["Televisori", "Monitor", "Schermi",
-                 "Cornici digitali LCD", "Laptop", "Notebook"]
-        raee4 = ["Elettroutensili", "Giocattoli", "Apparrecchi di illuminazione",
-                 "Dispositivi medici", "Piccoli elettrodomestici"]
-        raee5 = ["Sorgenti luminose compatte", " Lampade fluorescenti",
-                 "Tubi fluorescenti", "Led", "Lamapade a scarica"]
+        raee1 = ["
+                 "Congelatori",
+                 "Frigoriferi a doppia porta",
+                 "Frigoriferi side-by-side",
+                 "Frigoriferi con dispenser di acqua/ghiaccio",
+                 "Congelatori a cassetti",
+                 "Frigoriferi commerciali",
+                 "Congelatori commerciali",
+                 "Armadi frigoriferi industriali"
+        ]
+        raee2 = [
+            "Lavatrici",
+            "Lavastoviglie",
+            "Lavatrici a carica frontale",
+            "Lavatrici a carica dall'alto",
+            "Lavastoviglie a libera installazione",
+            "Lavastoviglie da incasso",
+            "Lavastoviglie compatte",
+            "Lavastoviglie ad alta capacità"
+        ]
+        raee3 = ["Televisori",
+                 "Monitor",
+                 "Schermi",
+                 "Cornici digitali LCD",
+                 "Laptop",
+                 "Notebook"
+        ]
+        raee4 = [
+            "Telefoni cellulari",
+            "Tablet",
+            "Computer desktop",
+            "Laptop",
+            "Stampanti",
+            "Scanner",
+            "Televisori",
+            "Fotocamere digitali",
+            "Videocamere",
+            "Console di gioco",
+            "Forni a microonde",
+            "Robot da cucina",
+            "Tostapane",
+            "Aspirapolvere",
+            "Lampadine a risparmio energetico",
+            "Lampade fluorescenti",
+            "Dispositivi medici"
+        ]
+
+        raee5 = ["Sorgenti luminose compatte",
+                 " Lampade fluorescenti",
+                 "Tubi fluorescenti",
+                 "Led",
+                 "Lampade a scarica"
+        ]
         raee = [raee1, raee2, raee3, raee4, raee5]
 
         time.sleep(1.5)
