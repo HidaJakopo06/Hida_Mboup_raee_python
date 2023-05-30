@@ -1,1 +1,1 @@
-If you want to work with us contact either @aAssane @HidaJakopo06
+If you want to work with us contact either @aAssane or @HidaJakopo06
